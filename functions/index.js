@@ -25,10 +25,10 @@ app.use(bodyparser.json());
 
 
 let connection = mysql.createPool({
-    host: '34.73.26.39',
-    user: 'haja',
-    password: 'haja10000',
-    database: 'webster'
+  host: functions.config().webster.hostname,
+    user: functions.config().webster.username,
+    password: functions.config().webster.password,
+    database: functions.config().webster.database
 
 });
 
