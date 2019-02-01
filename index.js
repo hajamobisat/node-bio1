@@ -16,10 +16,10 @@ app.use(bodyparser.json());
 
 
 let connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '123',
-    database: 'webster'
+    host: functions.config().webster.hostname,
+    user: functions.config().webster.username,
+    password: functions.config().webster.password,
+    database: functions.config().webster.database
 
 });
 
